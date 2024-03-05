@@ -2,18 +2,18 @@ package n1excercisi2.vehicle;
 
 public class Cotxe {
     private static final String marca = "Mercedes";
-    private static String model = "XX";
-    private final double potencia;
+    private static String model = "XX"; //no té sentit canviar el model de tota la classe al fer el constructor
+    private final double potencia;//no podra modificarse però pot ser especific de cada objecte de la classe
 
     public Cotxe(double potencia) {
-        this.potencia = potencia;
+        this.potencia = potencia;//l'unic que pot ser especific de lobjecte
     }
 
-    public static java.lang.String getModel() {
+    public static String getModel() {
         return model;
     }
 
-    public static void setModel(java.lang.String model) {
+    public static void setModel(String model) {
         Cotxe.model = model;
     }
 
