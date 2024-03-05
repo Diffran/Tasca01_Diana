@@ -20,4 +20,10 @@ public class Cotxe {
     public double getPotencia() {
         return potencia;
     }
+    public static void frenar(){
+        System.out.println("El vehicle està frenant");
+    }
+    public void accelerar(){
+        System.out.println("El vehicle està accelerant");
+    }
 }
