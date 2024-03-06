@@ -6,7 +6,7 @@ public class Venda {
 
     public Venda(Producte[] productes) {
         this.productes = productes;
-        //this.preuTotal = calcularTotal();
+        calcularTotal();
     }
 
     public Producte[] getProductes() {
@@ -25,12 +25,11 @@ public class Venda {
         this.preuTotal = preuTotal;
     }
 
-    public double calcularTotal(){
+    public void calcularTotal(){
         double suma = 0;
         for(int i=0; i<getProductes().length;i++){
             suma += getProductes()[i].getPreu();
         }
         setPreuTotal(suma);
-        return getPreuTotal();
     }
 }
