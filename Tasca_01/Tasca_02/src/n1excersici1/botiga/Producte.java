@@ -2,28 +2,17 @@ package n1excersici1.botiga;
 
 public class Producte {
     private String nom;
-    private double preu;
+    private float preu;
 
-    public Producte(String nom, double preu) {
+    public Producte(String nom, float preu) {
         this.nom = nom;
         this.preu = preu;
     }
-
+    //només el getter de preu perque es lunic que utilitzare
+    public float getPreu() {
+        return preu;
+    }
     public String getNom() {
         return nom;
     }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public double getPreu() {
-        return preu;
-    }
-
-    public void setPreu(double preu) {
-        this.preu = preu;
-    }
-
-
 }
