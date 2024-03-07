@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tasca_01.iml" filepath="$PROJECT_DIR$/Tasca_01.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tasca_02/Tasca_02.iml" filepath="$PROJECT_DIR$/Tasca_02/Tasca_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasca_03/Tasca_03.iml" filepath="$PROJECT_DIR$/Tasca_03/Tasca_03.iml" />
     </modules>
   </component>
 </project>

@@ -21,7 +21,7 @@ public class Main {
                 throw new VendaBuidaException("Per fer una venda primer has d’afegir productes");  
             }else{
                 Venda venda1 = new Venda(vendaBuida);
-                System.out.println("s'ha fet una venda de: " + venda1.getPreuTotal());
+                System.out.println("s'ha fet una venda de: " + venda1.getPreuTotal()+"€");
             }
         }catch(VendaBuidaException e){
             System.out.println(e.getMessage());
