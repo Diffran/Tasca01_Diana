@@ -5,11 +5,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Scanner;
-import java.util.Random;
-import java.util.Set;
-import java.util.HashSet;
+import java.sql.SQLOutput;
+import java.util.*;
 
 public class Main {
     public static final String LINEA = "________________________________________________________________";
@@ -25,11 +22,11 @@ public class Main {
        int punts = 0, indexAleatori, contador = 0, index = 0;;
        
        //file del arxiu per llegir
-       rutaRelativa = "Tasca01_Diana/Tasca_01/dades/countries.txt";
+       rutaRelativa = "dades"+File.separator+"countries.txt";
        File countries = new File (rutaRelativa);
 
        //file del arxiu per escriure
-       rutaRelativa = "Tasca01_Diana/Tasca_01/dades/classificacio.txt";
+       rutaRelativa = "dades"+File.separator+"classificacio.txt";
        File puntuacio = new File(rutaRelativa);
        
       
@@ -49,14 +46,23 @@ public class Main {
       //demanar al usuari les seves dades
       System.out.println("introdueixi el seu nom d'usuari: ");
       nomUsuari = lectorUsu.nextLine();
-      
+
+        if(!countries.exists()){
+            System.out.println("countries no existeix");
+            System.out.println(countries.getAbsolutePath());
+        }
+        if(!puntuacio.exists()){
+            System.out.println("no existeix");
+            System.out.println(puntuacio.getAbsolutePath());
+        }
+
       //comença a mostrar de forma aleatoria 
        System.out.println(LINEA);
        System.out.println("\t\tENTRA LES CAPITALS");
        System.out.println(LINEA);
        
        //Comença el bucle per treure de manera aleatoria els paisos
-       while(contador < 51){
+       while(contador < 10){
            //escull un número aleatori que no s'hagi repetit
             indexAleatori = aleatori.nextInt(llistatCountries.size());
             
