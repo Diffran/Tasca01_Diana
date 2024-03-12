@@ -1,16 +1,18 @@
 package n1exercici1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Mesos {
-   List<String> mesos = new ArrayList<>();
-    mesos.addAll(List.of("gener","febrer","març","abril","maig","juny","juliol","agost","setembre","octubre","novembre","desembre"));
+    static List<String> mesos = List.of( "gener","febrer","març","abril",
+            "maig", "juny", "juliol", "agost","setembre", "octubre",
+            "novembre", "desembre");
 
-}
-
-@Test 
-public void mesosTest(){
-    Mesos mes = new Mesos();
-    assertEquals(12,mes.size());
-    assertNotNull(mes);
-    assertEquals("agost",mes.getClass(7));
-    
+    public static String imprimirMes(int index){
+        if(index < mesos.size() && index > -1){
+            return mesos.get(index);
+        }else{
+            return "indexOutOfBounds";
+        }
+    }
 }
