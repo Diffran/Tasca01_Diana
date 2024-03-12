@@ -22,13 +22,13 @@ public class Main {
        int punts = 0, indexAleatori, contador = 0, index = 0;;
        
        //file del arxiu per llegir
-       rutaRelativa = "dades"+File.separator+"countries.txt";
-       File countries = new File (rutaRelativa);
+       rutaRelativa = "Tasca_01"+ File.separator+"dades"+File.separator+"countries.txt";
+       File countries = new File (System.getProperty("user.dir"),rutaRelativa);
 
        //file del arxiu per escriure
-       rutaRelativa = "dades"+File.separator+"classificacio.txt";
-       File puntuacio = new File(rutaRelativa);
-       
+       rutaRelativa = "Tasca_01"+ File.separator+"dades"+File.separator+"classificacio.txt";
+       File puntuacio = new File(System.getProperty("user.dir"),rutaRelativa);
+
       
        //Passar el file al HashMap----------------------------------------------
        try{   
@@ -104,6 +104,6 @@ public class Main {
            escriptor.write(nomUsuari);
        }catch(IOException e){
            System.out.println("Error: "+e.getMessage());
-       }    
+       }
     }
 }
