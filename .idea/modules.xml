@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Sprint_01.iml" filepath="$PROJECT_DIR$/.idea/Sprint_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_01.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_02/Tasca_02.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_02/Tasca_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_03/Tasca_03.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_03/Tasca_03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_04/Tasca_04.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_04/Tasca_04.iml" />
+    </modules>
+  </component>
+</project>
