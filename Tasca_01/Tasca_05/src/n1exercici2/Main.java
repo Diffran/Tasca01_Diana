@@ -1,10 +1,10 @@
-package n1exercici2;
+//package n1exercici2;
 
-import java.io.File;
+//import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        File dades = new File("C:/Users/formacio/Desktop/Diana_java/Sprint_1/Tasca_01/dades");
-        LlistarArbre.llistarArbre(dades, null);
+        String ruta = args[0];
+        LlistarArbre.llistarArbre(ruta);//faltara entrarli el null si vull fer l'arbre
     }
 }
