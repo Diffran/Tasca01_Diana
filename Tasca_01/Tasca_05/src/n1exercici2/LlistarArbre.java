@@ -27,9 +27,9 @@ public class LlistarArbre {
                 //imprimir el nom arxiu o entrar al directori
                 System.out.println("|"+file.getName());
                 if(file.isDirectory()){
-                    nivell++;
+                    nivell++;//fa que s'imprimeixi un tab mes
                     llistarArbre(file.getAbsolutePath(),nivell);
-                    nivell--;
+                    nivell--;//fa que s'imprimeixi un tab menys
                 }
             }
         }else{
