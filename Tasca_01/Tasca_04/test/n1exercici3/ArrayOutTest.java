@@ -8,8 +8,6 @@ public class ArrayOutTest {
     @Test
     public void arrayPochoTest(){
         Assertions.assertThrows(ArrayIndexOutOfBoundsException.class,
-                () -> {
-                    arrayPocho();
-                });
+                ArrayOut::arrayPocho);
     }
 }
