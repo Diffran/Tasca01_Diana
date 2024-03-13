@@ -1,5 +1,10 @@
 package n1exercici3;
 
+import static n1exercici3.ArrayOut.arrayPocho;
+
 public class Main {
-    //provo un add
+    public static void main(String[] args) {
+            arrayPocho();
+    }
+
 }
