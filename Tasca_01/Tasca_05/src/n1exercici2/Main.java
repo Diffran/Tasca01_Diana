@@ -5,6 +5,6 @@
 public class Main {
     public static void main(String[] args) {
         String ruta = args[0];
-        LlistarArbre.llistarArbre(ruta);//faltara entrarli el null si vull fer l'arbre
+        LlistarArbre.llistarArbre(ruta, null);
     }
 }
