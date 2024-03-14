@@ -1,7 +1,7 @@
-//package n1exercici1;
-//import java.io.File;
+package n1exercici1;
+import java.io.File;
 
-//import static n1exercici1.LlistarAlfaDirectori.llistarDir;
+import static n1exercici1.LlistarAlfaDirectori.llistarDir;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.

@@ -1,13 +1,14 @@
-//package n1exercici2;
+package n1exercici2;
 
 import java.io.File;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Date;
+
 
 public class LlistarArbre {
     public static final String TAB = "\t";
 
-    public static void llistarArbre(String ruta){//posar parametre Integer de nivell
+    public static void llistarArbre(String ruta, Integer nivell){//posar parametre Integer de nivell
         File directori = new File(ruta);
         
         if(nivell==null || nivell<0){
