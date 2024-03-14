@@ -20,10 +20,6 @@ public class Serialitzar {
         }
     }
 
-    public static File toFile(String ruta){
-        File file = new File(ruta);
-        return  file;
-    }
 
     //DESERIALIZACION -> ObjectInputStream
     public static CotxeSerial deserialitzarObj(String fitxer){//accepta qualsevol parametre seialized, string, arrays etc...

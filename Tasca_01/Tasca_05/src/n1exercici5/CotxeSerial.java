@@ -4,14 +4,17 @@ import java.io.Serializable;
 
 public class CotxeSerial implements Serializable {
     //per poder ser serialitzat un objecte ha d'implementar la Serializable
-    private String marca;
-    private String modelo;
-    public CotxeSerial(String marca, String modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
+    private String matricula;
+    private String model;
+    public CotxeSerial(String matricula, String modelo) {
+        this.matricula = matricula;
+        this.model = modelo;
     }
 
-    public String getMarca() {
-        return marca;
+    public String getMatricula() {
+        return matricula;
+    }
+    public String getModel() {
+        return model;
     }
 }
