@@ -6,6 +6,6 @@ public class Main {
         GenericMethods.metodeGeneric(p,"lletras",2);
         System.out.println("--------------------------------------------------");
         GenericMethods.metodeGeneric("lletras",2,p);
-
+        //no importa l'ordre dels arguments
     }
 }

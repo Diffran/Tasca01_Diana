@@ -1,8 +1,8 @@
 package n1excersisi1.instruments;
 
 public abstract class Instrument {
-    private String nom;
-    private float preu;
+    protected  String nom;
+    protected float preu;
 
     //constructor  que sera heredat
     public Instrument(String nom, float preu) {
