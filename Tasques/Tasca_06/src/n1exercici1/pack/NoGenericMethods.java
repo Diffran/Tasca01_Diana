@@ -1,4 +1,4 @@
-package n1exercici1;
+package n1exercici1.pack;
 
 public class NoGenericMethods {
     private String obj1;

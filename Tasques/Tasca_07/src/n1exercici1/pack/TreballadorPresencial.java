@@ -1,8 +1,8 @@
-package n1exercici1;
+package n1exercici1.pack;
 
 public class TreballadorPresencial extends Treballador{
     private static double benzina;
-    public TreballadorPresencial(String nom, String cognom, float preuHora) {
+    public TreballadorPresencial(String nom, String cognom, double preuHora) {
         super(nom, cognom, preuHora);
     }
 
