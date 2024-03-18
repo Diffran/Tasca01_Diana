@@ -3,12 +3,13 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Sprint_01.iml" filepath="$PROJECT_DIR$/.idea/Sprint_01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_01.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_02/Tasca_02.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_02/Tasca_02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_03/Tasca_03.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_03/Tasca_03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_04/Tasca_04.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_04/Tasca_04.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_05/Tasca_05.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_05/Tasca_05.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tasca_01/Tasca_06/Tasca_06.iml" filepath="$PROJECT_DIR$/Tasca_01/Tasca_06/Tasca_06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasques/Tasca_01/Tasca_01.iml" filepath="$PROJECT_DIR$/Tasques/Tasca_01/Tasca_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasques/Tasca_02/Tasca_02.iml" filepath="$PROJECT_DIR$/Tasques/Tasca_02/Tasca_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasques/Tasca_03/Tasca_03.iml" filepath="$PROJECT_DIR$/Tasques/Tasca_03/Tasca_03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasques/Tasca_04/Tasca_04.iml" filepath="$PROJECT_DIR$/Tasques/Tasca_04/Tasca_04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasques/Tasca_05/Tasca_05.iml" filepath="$PROJECT_DIR$/Tasques/Tasca_05/Tasca_05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasques/Tasca_06/Tasca_06.iml" filepath="$PROJECT_DIR$/Tasques/Tasca_06/Tasca_06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tasques/Tasques.iml" filepath="$PROJECT_DIR$/Tasques/Tasques.iml" />
     </modules>
   </component>
 </project>
