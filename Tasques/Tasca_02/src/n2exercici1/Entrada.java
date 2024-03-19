@@ -74,17 +74,22 @@ public class Entrada {
 
     //METODES EXCEPCIO EXCEPTION
     public static char llegirChar(String missatge){
+        String entrada;
         char dadaUsu='\0';
         boolean esCorrecte=false;
         while(!esCorrecte){
             System.out.println(missatge);
             try{
-                dadaUsu = lector.next().charAt(0);
-                esCorrecte = true;
+                entrada = lector.nextLine();
+                if(entrada.length()==1){
+                    dadaUsu = entrada.charAt(0);
+                    esCorrecte = true;
+                }else{
+                    throw new Exception();
+                }
             }catch(Exception e){
                 System.out.println("Error: "+e);
                 System.out.println("introdueix una dada de tipus char");
-                lector.next();
             }
         }
         return dadaUsu;
@@ -103,11 +108,31 @@ public class Entrada {
             }catch(Exception e){
                 System.out.println("Error: "+e);
                 System.out.println("introdueix una dada de tipus String");
-                lector.next();
             }
         }
         return dadaUsu;
     }
-
-    //TODO: arreglar char
+    public static boolean llegirSiNo(String missatge){
+        String dadaUsu="";
+        boolean esCorrecte=false;
+        while(!esCorrecte){
+            System.out.println(missatge);
+            try{
+                dadaUsu = lector.nextLine();
+                if(dadaUsu.equals("s")||dadaUsu.equals("n")){
+                      if (dadaUsu.equals("s")){
+                          return true;
+                      }else{
+                          return false;
+                      }
+                }else{
+                    throw new Exception();
+                }
+            }catch(Exception e){
+                System.out.println("Error: "+e);
+                System.out.println("introdueix una dada: 's' o 'n'");
+            }
+        }
+        return false;
+    }
 }
