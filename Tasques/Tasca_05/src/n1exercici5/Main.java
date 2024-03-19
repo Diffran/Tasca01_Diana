@@ -9,7 +9,7 @@ public class Main {
         Scanner lector = new Scanner(System.in);
 
         if(opcio.equals("-s")) {
-            System.out.println("introdueix marca: ");
+            System.out.println("introdueix matricula: ");
             matricula = lector.nextLine();
             System.out.println("introdueix model: ");
             model = lector.nextLine();

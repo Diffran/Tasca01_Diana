@@ -21,11 +21,11 @@ public class Main {
        int punts = 0, indexAleatori, contador = 0, index = 0;;
        
        //file del arxiu per llegir
-       rutaRelativa = "Tasca_01"+ File.separator+"dades"+File.separator+"countries.txt";
+       rutaRelativa = "Tasques"+ File.separator+"dades"+File.separator+"countries.txt";
        File countries = new File (System.getProperty("user.dir"),rutaRelativa);
 
        //file del arxiu per escriure
-       rutaRelativa = "Tasca_01"+ File.separator+"dades"+File.separator+"classificacio.txt";
+       rutaRelativa = "Tasques"+ File.separator+"dades"+File.separator+"classificacio.txt";
        File puntuacio = new File(System.getProperty("user.dir"),rutaRelativa);
 
       
