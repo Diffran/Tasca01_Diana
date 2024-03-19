@@ -12,5 +12,4 @@ public class Telefon {
     public void trucar(String numeroTel){
         System.out.println("s'està trucant al "+numeroTel);
     }
-
 }
