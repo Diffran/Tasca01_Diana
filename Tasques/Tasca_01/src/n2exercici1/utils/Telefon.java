@@ -1,8 +1,8 @@
 package n2exercici1.utils;
 
 public class Telefon {
-    private String marca;
-    private String model;
+    protected String marca;
+    protected String model;
 
     public Telefon(String marca, String model) {
         this.marca = marca;
