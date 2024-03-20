@@ -74,8 +74,7 @@ public class Entrada {
 
     //METODES EXCEPCIO EXCEPTION
     public static char llegirChar(String missatge){
-        lector = new Scanner(System.in);
-        String entrada;
+        String entrada= lector.nextLine();
         char dadaUsu='\0';
         boolean esCorrecte=false;
         while(!esCorrecte){
@@ -96,8 +95,7 @@ public class Entrada {
         return dadaUsu;
     }
     public static String llegirString(String missatge){
-        lector = new Scanner(System.in);
-        String dadaUsu="";
+        String dadaUsu = lector.nextLine();;
         boolean esCorrecte=false;
         while(!esCorrecte){
             System.out.println(missatge);
@@ -115,8 +113,7 @@ public class Entrada {
         return dadaUsu;
     }
     public static boolean llegirSiNo(String missatge){
-        lector = new Scanner(System.in);
-        String dadaUsu="";
+        String dadaUsu = lector.nextLine();;
         boolean esCorrecte=false;
         while(!esCorrecte){
             System.out.println(missatge);
