@@ -1,0 +1,11 @@
+[DIR] - dades || 2024-03-20T16:14:34.3908476Z
+[DIR] - casa || 2024-03-13T15:03:10.8715971Z
+[FIT] - ad.txt || 2024-03-13T15:03:10.8705051Z
+[FIT] - df.txt || 2024-03-13T15:03:10.8705051Z
+[DIR] - fsag || 2024-03-13T15:03:10.8715971Z
+[FIT] - fgs.txt || 2024-03-13T15:03:10.8715971Z
+[FIT] - sjkfjslaj.txt || 2024-03-13T15:03:10.8715971Z
+[FIT] - classificacio.txt || 2024-03-19T20:50:41.4903371Z
+[FIT] - countries.txt || 2024-03-12T21:15:57.314584Z
+[FIT] - directoriLlistat.txt || 2024-03-20T15:12:54.7070006Z
+[FIT] - directoriLlistatN2.txt || 2024-03-20T16:32:41.7257601Z

@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class LlegirDirNiv2 {
-    public static void llegirDir(String ruta, String rutaEsciptura){
+    public static void llegirDirNiv2(String ruta, String rutaEsciptura){
         Path start = Paths.get(ruta);
         Set<String> fitxersiDirecotis = new TreeSet<>();
         //el TreeSet fa que de manera automatica els seus element s'endecin de manera natural, en el cas
