@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//crear objectes restaurants, 1 de valors repetits
         RestaurantEx2 res1 = new RestaurantEx2("Trattoria del Nonno", 6);
         RestaurantEx2 res2 = new RestaurantEx2("Bistró Parisino", 7);
         RestaurantEx2 res3 = new RestaurantEx2("Taquería El Sol", 4);
@@ -15,17 +14,17 @@ public class Main {
         RestaurantEx2 res2MateixaPunt = new RestaurantEx2("Bar Nom", 7);
         RestaurantEx2 res3MateixNom = new RestaurantEx2("Taquería El Sol", 6);
 
-        //crear el HashSet posar els 3 primers objectes, que no son repetits
+
         HashSet<RestaurantEx2> llistatRestaurants = new HashSet<>();
         llistatRestaurants.addAll(List.of(res1,res2,res3));
 
-        //ara utilitzo el metode per insertar la resta d'objectes
+
         llistatRestaurants= RestaurantEx2.insertarRestaurant(llistatRestaurants,res4);
         llistatRestaurants= RestaurantEx2.insertarRestaurant(llistatRestaurants,res1Duplicat);
         llistatRestaurants= RestaurantEx2.insertarRestaurant(llistatRestaurants,res2MateixaPunt);
         llistatRestaurants= RestaurantEx2.insertarRestaurant(llistatRestaurants,res3MateixNom);
 
-        //imprimeixo el tamany, hauria de ser de 6, només un no s'entra
+
         System.out.println("---------------------------------------------------");
         System.out.println("numero de restaurants: "+llistatRestaurants.size());
         llistatRestaurants.forEach(restaurant -> System.out.println(restaurant.getNom()+"->"+restaurant.getPuntuacio()));

@@ -16,15 +16,15 @@ public class Main {
        Random aleatori = new Random();
        Set<Integer> repetits = new HashSet<>();
            
-       String linea, valor, nomUsuari, rutaRelativa, resposta;
+       String linea, nomUsuari, rutaRelativa, resposta;
        String[] partsLinea = new String[2];
        int punts = 0, indexAleatori, contador = 0, index = 0;;
        
-       //file del arxiu per llegir
+
        rutaRelativa = "Tasques"+ File.separator+"dades"+File.separator+"countries.txt";
        File countries = new File (System.getProperty("user.dir"),rutaRelativa);
 
-       //file del arxiu per escriure
+
        rutaRelativa = "Tasques"+ File.separator+"dades"+File.separator+"classificacio.txt";
        File puntuacio = new File(System.getProperty("user.dir"),rutaRelativa);
 
@@ -32,7 +32,7 @@ public class Main {
        //Passar el file al HashMap----------------------------------------------
        try{   
           BufferedReader lector = new BufferedReader(new FileReader(countries.getAbsolutePath()));
-          //llegir el document
+
           while((linea = lector.readLine()) != null){
               partsLinea = linea.split(" ");
               llistatCountries.put(partsLinea[0], partsLinea[1]);
@@ -42,25 +42,16 @@ public class Main {
            System.out.println("Error: "+e.getMessage());
        }
        
-      //demanar al usuari les seves dades
+
       System.out.println("introdueixi el seu nom d'usuari: ");
       nomUsuari = lectorUsu.nextLine();
 
-        if(!countries.exists()){
-            System.out.println("countries no existeix");
-            System.out.println(countries.getAbsolutePath());
-        }
-        if(!puntuacio.exists()){
-            System.out.println("no existeix");
-            System.out.println(puntuacio.getAbsolutePath());
-        }
 
-      //comença a mostrar de forma aleatoria 
        System.out.println(LINEA);
        System.out.println("\t\tENTRA LES CAPITALS");
        System.out.println(LINEA);
        
-       //Comença el bucle per treure de manera aleatoria els paisos
+
        while(contador < 10){
            //escull un número aleatori que no s'hagi repetit
             indexAleatori = aleatori.nextInt(llistatCountries.size());
@@ -69,15 +60,15 @@ public class Main {
                 indexAleatori = aleatori.nextInt(llistatCountries.size());
             }
            repetits.add(indexAleatori);
-            //si no el conté imprimeix a pantalla el pais a l'index escullit i espera l'entrada de dades del Usu
+
             for (HashMap.Entry<String, String> entrada : llistatCountries.entrySet()) {
                 if (index == indexAleatori) {
                     System.out.println(entrada.getKey()+": ");
                     
-                    //recollir la resposta del Usuari
+
                     resposta = lectorUsu.nextLine();
                     
-                    //comporvar si es correcta, sumar punts si ho és
+
                     if(entrada.getValue().equalsIgnoreCase(resposta)){
                         System.out.println("Correcte!");
                         punts++;
@@ -87,11 +78,11 @@ public class Main {
                 }
                 index++;
             }
-            index=0;//reiniciar per les seguents preguntes
+            index=0;
             contador++;
        }       
        
-       //diu a pantalla l'usuari i la puntuació
+
        System.out.println(LINEA);
        System.out.println("\t\tPUNTUACIÓ");
        System.out.println(LINEA);

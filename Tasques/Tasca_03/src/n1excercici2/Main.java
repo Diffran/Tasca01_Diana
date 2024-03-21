@@ -17,12 +17,12 @@ public class Main {
         System.out.println();
 
         List<Integer> llistaInversa = new ArrayList<>();
-        //utilitzar listIterator per recorre la llista al reves
+
         ListIterator<Integer> iteradorReves = llista.listIterator(llista.size());
         while(iteradorReves.hasPrevious()){
             llistaInversa.add(iteradorReves.previous());
         }
-        //recorre la llista que esta guardada al reves
+
         for(Integer a: llistaInversa){
             System.out.println(a);
         }

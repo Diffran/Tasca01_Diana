@@ -10,11 +10,9 @@ public class Restaurant {
         this.nom = nom;
         this.puntuacio = puntuacio;
     }
-
     public String getNom() {
         return nom;
     }
-
     public int getPuntuacio() {
         return puntuacio;
     }
@@ -23,6 +21,7 @@ public class Restaurant {
         boolean existeix = false;
         for(Restaurant restaurant : restaurants){
             if(restaurant.nom.equals(entradaRest.nom)&&(restaurant.puntuacio==entradaRest.puntuacio)){
+
                 System.out.println("no es pot entrar l'objecte restaurant, perque ja està el restaurant");
                 existeix = true;
             }
@@ -31,6 +30,6 @@ public class Restaurant {
             restaurants.add(entradaRest);
             return restaurants;
         }
-        return restaurants;//retorna el HashSet sense modificar.
+        return restaurants;
     }
 }
