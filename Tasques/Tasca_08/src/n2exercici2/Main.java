@@ -14,8 +14,7 @@ public class Main {
         String cadena;
         cadena = numeros.stream()
                 .map(numero -> numero%2==0? "e"+numero : "o"+numero)
-                //condicional ? -> if i : -> else. al concatenar amb "e" es converteix automaticament en cadena
-                .collect(Collectors.joining(","));//recull i afeigeix un delimitador
+                .collect(Collectors.joining(","));
         return cadena;
     }
 }

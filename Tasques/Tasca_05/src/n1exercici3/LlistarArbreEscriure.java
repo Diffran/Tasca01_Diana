@@ -1,6 +1,5 @@
 package n1exercici3;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -26,19 +25,19 @@ public class LlistarArbreEscriure {
             Arrays.sort(ordenarFiles);
 
             for (File file : ordenarFiles) {
-                //imprimeix tabs segons el nivell del contingut del directori
+
                 for(int i=0; i<nivell; i++){
                     linea = linea.concat(TAB);
                 }
 
-                //imprimir el nom arxiu o entrar al directori-----------------------------------------
+
                 if(file.isDirectory()){
                     linea = linea.concat(" [DIR]");
                 }else{
                     linea = linea.concat(" [FIT]");
                 }
                 linea = linea.concat("|"+file.getName()+ " - " + new Date(file.lastModified()) + "\n");//es el nom del arxiu o directori
-                arrayDirectori.add(linea);//vaig omplint el array list amb les lineas
+                arrayDirectori.add(linea);
                 linea="";
 
                 if(nivell == 0){
@@ -48,7 +47,7 @@ public class LlistarArbreEscriure {
                         for(int i=0; i<arrayDirectori.size(); i++){
                             escriptor.write(arrayDirectori.get(i));
                         }
-                        arrayDirectori.clear();//neteja l'array un cop ja shan enviat el nivell 0
+                        arrayDirectori.clear();
                         escriptor.close();
                     }catch (IOException e) {
                         System.out.println("Error: " + e.getMessage());
@@ -56,11 +55,11 @@ public class LlistarArbreEscriure {
                 }
 
 
-                //si es un directori entra a dins i crida de nou el metode per imprimirne el contingut
+
                 if (file.isDirectory()) {
-                    nivell++;//fa que s'imprimeixi un tab mes
+                    nivell++;
                     llistarEsciureDir(file.getAbsolutePath(),rutaEscriure, nivell);
-                    nivell--;//fa que simprimeixi un tab menys
+                    nivell--;
                 }
             }
 

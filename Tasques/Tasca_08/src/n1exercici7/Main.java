@@ -15,7 +15,6 @@ public class Main {
     public static void ordenarStrings(List<Object> llista){
         llista.stream()
                 .filter(objecte -> objecte.getClass().equals(String.class))
-                //només cal demanar el metode .reversed un cop has utilitzat el comparator de length
                 .sorted(Comparator.comparingInt(paraula -> ((String)paraula).length()).reversed())
                 .forEach(System.out::println);
     }

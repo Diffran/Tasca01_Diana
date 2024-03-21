@@ -8,7 +8,7 @@ import java.util.Date;
 public class LlistarArbre {
     public static final String TAB = "\t";
 
-    public static void llistarArbre(String ruta, Integer nivell){//posar parametre Integer de nivell
+    public static void llistarArbre(String ruta, Integer nivell){
         File directori = new File(ruta);
         
         if(nivell==null || nivell<0){
@@ -21,12 +21,12 @@ public class LlistarArbre {
 
             for(File file : ordenarFiles){
                 
-                //perque faci un o més tabs depenent del nivell-------------------------------------
+
                 for(int i=0; i<nivell; i++){
                     System.out.print(TAB);
                 }
 
-                //imprimir el nom arxiu o entrar al directori-----------------------------------------
+
                 if(file.isDirectory()){
                     System.out.print(" [DIR]");
                 }else{
@@ -34,11 +34,11 @@ public class LlistarArbre {
                 }
                 System.out.println("|"+file.getName()+ " - " + new Date(file.lastModified()));//es el nom del arxiu o directori
 
-                //si es un directori entra a dins i crida de nou el metode per imprimirne el contingut
+
                 if(file.isDirectory()){
-                    nivell++;//fa que s'imprimeixi un tab mes
+                    nivell++;
                     llistarArbre(file.getAbsolutePath(),nivell);
-                    nivell--;//fa que s'imprimeixi un tab menys
+                    nivell--;
                 }      
             }
         }else{

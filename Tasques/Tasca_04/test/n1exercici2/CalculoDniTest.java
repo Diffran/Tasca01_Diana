@@ -17,7 +17,7 @@ public class CalculoDniTest {
     }
 
     public static HashMap<Integer,Character> inicializarDni(){
-        //creo un HashMap amb la clau lligada al dni i el value la lletra
+
         for(int i=0; i<numero.size(); i++){
             dni.put(numero.get(i), lletra.get(i));
         }

@@ -7,17 +7,17 @@ public class LlegirDirEx1 {
 
     public static void llegirDir(String ruta){
         File directori = new File(ruta);
-        File fitxers[] = directori.listFiles();//llista només el contingut del directori, crea l'array del length adequat
+        File fitxers[] = directori.listFiles();
         TreeSet<String> fitxersOrdenats = new TreeSet<>();
 
         if(directori.isDirectory()){
 
-            //passar el array al TreeSet
+            //TreeSet endreça automaticament
             for(File file : fitxers){
-                fitxersOrdenats.add(file.getName());//al ser un TreeSet els endreçara automaticament
+                fitxersOrdenats.add(file.getName());
             }
 
-            //imprimir el TreeSet, ja ordenat
+
             for(String file : fitxersOrdenats){
                 System.out.println(file);
             }

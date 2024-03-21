@@ -9,25 +9,25 @@ import java.util.TreeSet;
 public class Serialitzar {
 
     //SERIALITZACIÓ ->
-    public static void serialitzarObj(Object objecte){//accepta qualsevol parametre seialized, string, arrays etc...
+    public static void serialitzarObj(Object objecte){
 
         try(ObjectOutputStream serial = new ObjectOutputStream (new FileOutputStream("serial.ser"))){
-            //esciure l'objecte serialitzat
+
             serial.writeObject(objecte);
-            serial.close();//diu que es redundante tancarlo...
+            serial.close();
+
         }catch(IOException e){
             System.out.println("Error: " + e);
         }
     }
 
-
     //DESERIALIZACION -> ObjectInputStream
-    public static CotxeSerial deserialitzarObj(String fitxer){//accepta qualsevol parametre seialized, string, arrays etc...
+    public static CotxeSerial deserialitzarObj(String fitxer){
         try (FileInputStream fis = new FileInputStream(fitxer);
              ObjectInputStream ois = new ObjectInputStream(fis)){//no entenc...??
-            //esciure l'objecte serialitzat
 
             return (CotxeSerial)ois.readObject();
+
         }catch(Exception e){
             System.out.println("Error: " + e);
             Object objetoDeserializado = null;
@@ -49,11 +49,11 @@ public class Serialitzar {
             System.out.println("Error: " + e);
         }
     }
+
     public static void llegirDir(String ruta, String rutaEsciptura){
         Path start = Paths.get(ruta);
         Set<String> fitxersiDirecotis = new TreeSet<>();
-        //el TreeSet fa que de manera automatica els seus element s'endecin de manera natural, en el cas
-        //del String seria alfabeticament
+
 
         try (BufferedWriter escriptor = new BufferedWriter(new FileWriter(rutaEsciptura))){
             Files.walkFileTree(start, new SimpleFileVisitor<Path>() {

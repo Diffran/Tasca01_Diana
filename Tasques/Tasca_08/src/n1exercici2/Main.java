@@ -10,7 +10,7 @@ public class Main {
                 "Elefante","Zapato","Ventana","Mochila","Televisor","Tren","Piano","Fresa","Montaña","Vela","Globo","Helado","Unicornio"));
         String lletraO = "o";
 
-        //canvio el valor de la llista per una que te la condicio que vull
+
         llista = paraulaAmbO(llista, lletraO);
 
         System.out.println("Paraules amb o i amb més de 5 lletres:");

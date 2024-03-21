@@ -1,7 +1,6 @@
 package n1exercici2;
 
-import java.awt.*;
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class CalculoDni {

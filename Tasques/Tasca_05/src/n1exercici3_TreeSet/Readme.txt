@@ -2,7 +2,7 @@
 1- al Main-> String directori = args[0];
 2- al Main -> String rutaEscriure = args[1];
 2- tenir tots els package n1exercici1; comentats -> //package 
-3- A classe Main tenir tots els import comentats -> //import java.io.File
+3- A classe Main tenir  els import comentats -> import n1exercici3.LlistarArbreEscriure;
 4- obrir terminal a la carpeta on es troba el Main i les classes -> cd /ruta/carpeta
 5- escriure al terminal-> javac Main.java
 6- escriure al terminal-> java Main "C:\laRuta\AlDirectori" "C:\laRuta\alFitxer\fitxer.txt"

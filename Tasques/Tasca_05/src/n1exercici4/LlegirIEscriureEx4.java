@@ -8,7 +8,7 @@ import java.util.TreeSet;
 
 public class LlegirIEscriureEx4 {
     public static void llegirFitxer(String ruta){
-        //llegir el document
+
         try(BufferedReader lector = new BufferedReader(new FileReader(ruta))){
             String linea;
             while((linea = lector.readLine()) != null){
@@ -23,8 +23,7 @@ public class LlegirIEscriureEx4 {
     public static void llegirDir(String ruta, String rutaEsciptura){
         Path start = Paths.get(ruta);
         Set<String> fitxersiDirecotis = new TreeSet<>();
-        //el TreeSet fa que de manera automatica els seus element s'endecin de manera natural, en el cas
-        //del String seria alfabeticament
+
 
         try (BufferedWriter escriptor = new BufferedWriter(new FileWriter(rutaEsciptura))){
             Files.walkFileTree(start, new SimpleFileVisitor<Path>() {

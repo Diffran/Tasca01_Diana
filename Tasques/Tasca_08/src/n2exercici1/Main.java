@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
         List<String> noms = List.of("Juan","Arnau","Laura","Ava","Sofía", "Adriana","Elena","Luis","Ana","Pablo" ,"Marta" ,"Alejandro");
 
-        //cridar al metode i imprimir
         System.out.println(nomsAmbA(noms));
     }
 
