@@ -6,12 +6,18 @@ public abstract class Noticia {
     protected int puntuacio;
     protected double preu;
 
-    public Noticia(String titular, int puntuacio, double preu) {
+    public Noticia(String titular) {
         this.titular = titular;
         this.text = "";
-        this.puntuacio = puntuacio;
-        this.preu = preu;
     }
 
-    public abstract double calcularPreuNoticia(Noticia noticia);
+    public double getPreu() {
+        return preu;
+    }
+
+    public int getPuntuacio() {
+        return puntuacio;
+    }
+
+    public abstract double calcularPreuNoticia();
 }
