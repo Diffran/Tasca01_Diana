@@ -10,8 +10,7 @@ public class Mesos {
     public static String imprimirMes(int index){
         if(index < mesos.size() && index > -1){
             return mesos.get(index);
-        }else{
-            return "indexOutOfBounds";
         }
+        return  "";
     }
 }
