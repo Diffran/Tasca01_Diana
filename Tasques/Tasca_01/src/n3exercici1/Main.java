@@ -1,7 +1,6 @@
 package n3exercici1;
 
-import n3exercici1.noticies.Futbol;
-import n3exercici1.noticies.Noticia;
+import n3exercici1.noticies.*;
 import n3exercici1.redactor.Redactor;
 
 import java.util.*;
@@ -20,12 +19,13 @@ public class Main {
 
             switch (opcio){
                 case 1:
-                    introduirRed();
+                    llistatRedactors.add(introduirRed());
                     break;
                 case 2:
                     eliminarRed();
                     break;
                 case 3:
+                    introduirNot();
                     break;
                 case 4:
                     break;
@@ -68,12 +68,12 @@ public class Main {
         int opcio=0;
 
         System.out.println("--------------TIPUS DE NOTICIA---------------");
-        System.out.println("introdueix tipus de noticia:");
         System.out.println("1.-Futbol");
         System.out.println("2.-Basquet");
         System.out.println("3.-Tenis");
         System.out.println("4.-F1");
         System.out.println("5.-Motociclisme");
+        System.out.println("introdueix tipus de noticia:");
 
         try{
             opcio = lector.nextInt();
@@ -109,7 +109,7 @@ public class Main {
 
         if(!eliminat){
             System.out.println("el redactor NO s'ha eliminat perque no s'ha trobat" +
-                    "cap redactor amb aquest dni");
+                    " cap redactor amb aquest dni");
         }
     }
     public static void introduirNot(){
@@ -123,6 +123,7 @@ public class Main {
             if(redactor.getDni().equalsIgnoreCase(dniRed)){
                 existeix = true;
                 redactor.noticies.add(crearNot());
+                System.out.println("s'ha introduit correctament la noticia en el redator: "+dniRed);
             }
         }
 
@@ -131,26 +132,86 @@ public class Main {
         }
     }
     public static Noticia crearNot(){
-        int opcio = mostrarMenu();
-        String
+        Noticia noticia;
+        boolean opcioInvalida;
+        do {
+            opcioInvalida = false;
+            int opcio = mostrarTipusNot();
+            String titular, competicio, club, jugador, tenista, escuderia, equip;
 
-        switch(opcio){
-            case 1:
-                System.out.println("Futbol");
+            switch (opcio) {
+                case 1:
+                    System.out.println("Futbol");
+                    System.out.println("titular noticia: ");
+                    titular = lector.nextLine();
+                    System.out.println("competicio: ");
+                    competicio = lector.nextLine();
+                    System.out.println("club: ");
+                    club = lector.nextLine();
+                    System.out.println("jugador: ");
+                    jugador = lector.nextLine();
 
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 4:
-                break;
-            case 5:
-                break;
-            default:
-                System.out.println("opcio no vàlida");
+                    return noticia = new Futbol(titular, competicio, club, jugador);
+                case 2:
+                    System.out.println("Basquet");
+                    System.out.println("titular noticia: ");
+                    titular = lector.nextLine();
+                    System.out.println("competicio: ");
+                    competicio = lector.nextLine();
+                    System.out.println("club: ");
+                    club = lector.nextLine();
+
+                    return noticia = new Basquet(titular,competicio,club);
+                case 3:
+                    System.out.println("Tenis");
+                    System.out.println("titular noticia: ");
+                    titular = lector.nextLine();
+                    System.out.println("competicio: ");
+                    competicio = lector.nextLine();
+                    System.out.println("tenista: ");
+                    tenista = lector.nextLine();
+
+                    return noticia = new Tenis(titular,competicio,tenista);
+                case 4:
+                    System.out.println("F1");
+                    System.out.println("titular noticia: ");
+                    titular = lector.nextLine();
+                    System.out.println("escuderia: ");
+                    escuderia = lector.nextLine();
+
+                    return noticia = new F1(titular, escuderia);
+                case 5:
+                    System.out.println("Motociclisme");
+                    System.out.println("titular noticia: ");
+                    titular = lector.nextLine();
+                    System.out.println("equip: ");
+                    equip = lector.nextLine();
+
+                    return noticia= new Motociclisme(titular, equip);
+                default:
+                    System.out.println("opcio no vàlida");
+                    opcioInvalida = true;
+            }
+        }while(opcioInvalida);
+        return noticia = new Futbol(null,null,null,null);
+    }
+    public static void eliminarNot(){
+        boolean existeix = false;
+        String dniRed;
+
+        System.out.println("introdueix el dni del redactor: ");
+        dniRed = lector.nextLine();
+
+        for(Redactor redactor : llistatRedactors){
+            if(redactor.getDni().equalsIgnoreCase(dniRed)){
+                existeix = true;
+
+            }
         }
 
+        if(!existeix){
+            System.out.println("No s'ha trobat cap redactor amb aquest dni");
+        }
     }
 
 
