@@ -26,4 +26,14 @@ public class Basquet extends Noticia{
 
         return this.preu;
     }
+
+    @Override
+    public void mostrarNot(){
+        System.out.println("Titular: "+this.titular);
+        System.out.println("Competicio: "+this.competicio);
+        System.out.println("Club: "+this.club);
+        System.out.println("Text: "+this.text);
+        System.out.println("Preu: "+this.preu);
+        System.out.println("Puntuacio: "+this.puntuacio);
+    }
 }

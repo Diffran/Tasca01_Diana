@@ -15,9 +15,14 @@ public abstract class Noticia {
         return preu;
     }
 
+    public String getTitular() {
+        return titular;
+    }
+
     public int getPuntuacio() {
         return puntuacio;
     }
 
     public abstract double calcularPreuNoticia();
+    public abstract void mostrarNot();
 }

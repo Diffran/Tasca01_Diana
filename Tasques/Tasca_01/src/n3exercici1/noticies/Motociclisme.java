@@ -20,4 +20,13 @@ public class Motociclisme extends Noticia {
 
         return this.preu;
     }
+
+    @Override
+    public void mostrarNot(){
+        System.out.println("Titular: "+this.titular);
+        System.out.println("Equip: "+this.equip);
+        System.out.println("Text: "+this.text);
+        System.out.println("Preu: "+this.preu);
+        System.out.println("Puntuacio: "+this.puntuacio);
+    }
 }
