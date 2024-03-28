@@ -10,6 +10,7 @@ public class Tenis extends Noticia{
         this.tenistes = tenistes;
 
         this.preu = calcularPreuNoticia();
+        this.puntuacio = calcularPuntuacioNoticia();
     }
 
     @Override
@@ -43,5 +44,6 @@ public class Tenis extends Noticia{
         System.out.println("Text: "+this.text);
         System.out.println("Preu: "+this.preu);
         System.out.println("Puntuacio: "+this.puntuacio);
+        System.out.println("____________________________________________________");
     }
 }

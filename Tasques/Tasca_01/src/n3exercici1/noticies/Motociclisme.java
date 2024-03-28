@@ -8,6 +8,7 @@ public class Motociclisme extends Noticia {
         this.equip = equip;
 
         this.preu = calcularPreuNoticia();
+        this.puntuacio = calcularPuntuacioNoticia();
     }
 
     @Override
@@ -38,5 +39,6 @@ public class Motociclisme extends Noticia {
         System.out.println("Text: "+this.text);
         System.out.println("Preu: "+this.preu);
         System.out.println("Puntuacio: "+this.puntuacio);
+        System.out.println("____________________________________________________");
     }
 }

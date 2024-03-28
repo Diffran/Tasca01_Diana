@@ -1,6 +1,8 @@
 package n3exercici1.redactor;
 
 import n3exercici1.noticies.Noticia;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Redactor {
@@ -8,7 +10,7 @@ public class Redactor {
     private final String dni;
     private static double sou = 1500;
 
-    public List<Noticia> noticies;
+    public List<Noticia> noticies = new ArrayList<>();
 
     public Redactor(String nom, String dni) {
         this.nom = nom;

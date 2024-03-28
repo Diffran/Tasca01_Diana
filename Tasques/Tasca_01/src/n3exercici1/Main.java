@@ -109,6 +109,8 @@ public class Main {
         }
         if (!eliminat) {
             System.out.println("el redactor NO s'ha eliminat");
+        }else{
+            System.out.println("redactor eliminat correctament");
         }
     }
     public static void introduirNot() {
@@ -128,6 +130,8 @@ public class Main {
 
             if(!existeix){
                 System.out.println("no s'ha pogut afegir la noticia al llistat del redactor");
+            }else {
+                System.out.println("noticia introduida correctament");
             }
         }
     }
@@ -239,7 +243,7 @@ public class Main {
     }
 
     public static Redactor buscarRed() {
-        String dni = lector.nextLine();
+        String dni;
         Redactor red;
         System.out.println("entra el dni del redactor: ");
         dni = lector.nextLine();
@@ -252,7 +256,7 @@ public class Main {
     }
     public static Noticia buscarNot(Redactor redactor) {
         Noticia not = null;
-        String titular = lector.nextLine();
+        String titular;
         if (redactor == null) {
             System.out.println("no s'ha trobat cap redactor amb aquest dni");
             return not;
