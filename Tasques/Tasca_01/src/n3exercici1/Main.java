@@ -211,6 +211,8 @@ public class Main {
         }
         if(!existeix){
             System.out.println("no s'ha pogut eliminar la noticia");
+        }else{
+            System.out.println("Noticia eliminada correctament");
         }
     }
     public static void mostrarLlistatRed() {
@@ -265,7 +267,7 @@ public class Main {
         titular = lector.nextLine();
         for (Noticia noticia : redactor.noticies) {
             if (noticia.getTitular().equalsIgnoreCase(titular)) {
-                return not;
+                return noticia;
             }
         }
         return not = null;
