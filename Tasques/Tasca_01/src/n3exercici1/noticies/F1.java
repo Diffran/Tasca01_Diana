@@ -20,7 +20,16 @@ public class F1 extends Noticia{
 
         return this.preu;
     }
+    @Override
+    public int calcularPuntuacioNoticia(){
+        this.puntuacio = 4;
 
+        if(this.escuderia.equalsIgnoreCase("ferrari") || this.escuderia.equalsIgnoreCase("mercedes")){
+            this.puntuacio += 2;
+        }
+
+        return this.puntuacio;
+    }
     @Override
     public void mostrarNot(){
         System.out.println("Titular: "+this.titular);

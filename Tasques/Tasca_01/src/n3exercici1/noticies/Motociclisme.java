@@ -20,6 +20,16 @@ public class Motociclisme extends Noticia {
 
         return this.preu;
     }
+    @Override
+    public int calcularPuntuacioNoticia(){
+        this.puntuacio = 3;
+
+        if(this.equip.equalsIgnoreCase("honda") || this.equip.equalsIgnoreCase("yamaha")){
+            this.puntuacio += 3;
+        }
+
+        return this.puntuacio;
+    }
 
     @Override
     public void mostrarNot(){

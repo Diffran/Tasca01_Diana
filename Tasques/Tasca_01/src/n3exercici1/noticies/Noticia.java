@@ -24,5 +24,6 @@ public abstract class Noticia {
     }
 
     public abstract double calcularPreuNoticia();
+    public  abstract int calcularPuntuacioNoticia();
     public abstract void mostrarNot();
 }

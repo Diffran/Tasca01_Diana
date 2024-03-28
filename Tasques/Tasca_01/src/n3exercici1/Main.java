@@ -9,17 +9,16 @@ public class Main {
     public static Scanner lector = new Scanner(System.in);
     public static List<Redactor> llistatRedactors = new ArrayList<>();
     public static Map<Redactor, Noticia> llistatNoticies = new HashMap<>();
+
     public static void main(String[] args) {
-        //Futbol n1fut = new Futbol("Hola","Lliga de campions", "Barça", "benzema");
-        //System.out.println(n1fut.getPreu());
-        int opcio=0;
+        int opcio = 0;
 
-        do{
-            opcio= mostrarMenu();
+        do {
+            opcio = mostrarMenu();
 
-            switch (opcio){
+            switch (opcio) {
                 case 1:
-                    llistatRedactors.add(introduirRed());
+                    introduirRed();
                     break;
                 case 2:
                     eliminarRed();
@@ -31,7 +30,7 @@ public class Main {
                     eliminarNot();
                     break;
                 case 5:
-                    mostrarLlistatNot();
+                    mostrarLlistatRed();
                     break;
                 case 6:
                     puntuacioNot();
@@ -45,11 +44,11 @@ public class Main {
                     System.out.println("entra una opcio del 1 al 8");
             }
 
-        }while(opcio != 8);
+        } while (opcio != 8);
     }
 
-    public static int mostrarMenu(){
-        int opcio= 0;
+    public static int mostrarMenu() {
+        int opcio = 0;
 
         System.out.println("--------------------MENU--------------------------");
         System.out.println("1.- Introduir redactor.");
@@ -61,16 +60,16 @@ public class Main {
         System.out.println("7.- Calcular preu-notícia.");
         System.out.println("8.- Sortir.");
 
-        try{
-           opcio = lector.nextInt();
-           lector.nextLine();
-        }catch(InputMismatchException e){
+        try {
+            opcio = lector.nextInt();
+            lector.nextLine();
+        } catch (InputMismatchException e) {
             System.out.println("Entra un valor tipus integral");
         }
         return opcio;
     }
-    public static int mostrarTipusNot(){
-        int opcio=0;
+    public static int mostrarTipusNot() {
+        int opcio = 0;
 
         System.out.println("--------------TIPUS DE NOTICIA---------------");
         System.out.println("1.-Futbol");
@@ -80,15 +79,16 @@ public class Main {
         System.out.println("5.-Motociclisme");
         System.out.println("introdueix tipus de noticia:");
 
-        try{
+        try {
             opcio = lector.nextInt();
             lector.nextLine();
-        }catch(InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("Entra un valor tipus integral");
         }
         return opcio;
     }
-    public static Redactor introduirRed(){
+
+    public static void introduirRed() {
         String nom, dni;
         System.out.println("introdueix el nom: ");
         nom = lector.nextLine();
@@ -96,48 +96,42 @@ public class Main {
         dni = lector.nextLine();
         Redactor r = new Redactor(nom, dni);
 
-        return r;
+        llistatRedactors.add(r);
     }
-    public static void eliminarRed(){
+    public static void eliminarRed() {
         boolean eliminat = false;
-        String dniRed;
+        Redactor redactor = buscarRed();
 
-        System.out.println("introdueix el dni del redactor a eliminar: ");
-        dniRed = lector.nextLine();
-
-        for(Redactor redactor : llistatRedactors){
-            if(redactor.getDni().equalsIgnoreCase(dniRed)){
-                llistatRedactors.remove(redactor);
-                System.out.println("redactor eliminat correctament");
-                eliminat = true;
-            }
+        if(redactor==null){
+            System.out.println("no s'ha trobat cap redactor amb aquest dni");
+        }else{
+            eliminat=llistatRedactors.remove(redactor);
         }
-
-        if(!eliminat){
-            System.out.println("el redactor NO s'ha eliminat perque no s'ha trobat" +
-                    " cap redactor amb aquest dni");
+        if (!eliminat) {
+            System.out.println("el redactor NO s'ha eliminat");
         }
     }
-    public static void introduirNot(){
+    public static void introduirNot() {
         boolean existeix = false;
-        String dniRed;
+        Redactor redactor = buscarRed();
+        Noticia noticia;
 
-        System.out.println("introdueix el dni del redactor: ");
-        dniRed = lector.nextLine();
+        if(redactor==null){
+            System.out.println("no s'ha trobat cap redactor amb aquest dni");
+        }else{
+            noticia = crearNot();
+            if(noticia == null){
+                System.out.println("no s'ha pogut crear correctament la noticia");
+            }else {
+                existeix=redactor.noticies.add(noticia);
+            }
 
-        for(Redactor redactor : llistatRedactors){
-            if(redactor.getDni().equalsIgnoreCase(dniRed)){
-                existeix = true;
-                redactor.noticies.add(crearNot());
-                System.out.println("s'ha introduit correctament la noticia en el redator: "+dniRed);
+            if(!existeix){
+                System.out.println("no s'ha pogut afegir la noticia al llistat del redactor");
             }
         }
-
-        if(!existeix){
-            System.out.println("No s'ha trobat cap redactor amb aquest dni");
-        }
     }
-    public static Noticia crearNot(){
+    public static Noticia crearNot() {
         Noticia noticia;
         boolean opcioInvalida;
         do {
@@ -167,7 +161,7 @@ public class Main {
                     System.out.println("club: ");
                     club = lector.nextLine();
 
-                    return noticia = new Basquet(titular,competicio,club);
+                    return noticia = new Basquet(titular, competicio, club);
                 case 3:
                     System.out.println("Tenis");
                     System.out.println("titular noticia: ");
@@ -177,7 +171,7 @@ public class Main {
                     System.out.println("tenista: ");
                     tenista = lector.nextLine();
 
-                    return noticia = new Tenis(titular,competicio,tenista);
+                    return noticia = new Tenis(titular, competicio, tenista);
                 case 4:
                     System.out.println("F1");
                     System.out.println("titular noticia: ");
@@ -193,115 +187,85 @@ public class Main {
                     System.out.println("equip: ");
                     equip = lector.nextLine();
 
-                    return noticia= new Motociclisme(titular, equip);
+                    return noticia = new Motociclisme(titular, equip);
                 default:
                     System.out.println("opcio no vàlida");
                     opcioInvalida = true;
             }
-        }while(opcioInvalida);
-        return noticia = new Futbol(null,null,null,null);
+        } while (opcioInvalida);
+        return noticia = null;
     }
-    public static void eliminarNot(){
+    public static void eliminarNot() {
         boolean existeix = false;
-        String dniRed, titular;
+        Redactor redactor = buscarRed();
+        Noticia noticia = buscarNot(redactor);
 
-        System.out.println("introdueix el dni del redactor: ");
-        dniRed = lector.nextLine();
-
-        for(Redactor redactor : llistatRedactors){
-            if(redactor.getDni().equalsIgnoreCase(dniRed)){
-                existeix = true;
-                System.out.println("introdueix el titular de la noticia: ");
-                titular = lector.nextLine();
-                for(Noticia noticia : redactor.noticies){
-                     if(noticia.getTitular().equalsIgnoreCase(titular)){
-                         redactor.noticies.remove(noticia);
-                         System.out.println("noticia eliminada correctament");
-                     }
-                }
-            }
+        if(noticia == null){
+            System.out.println("no s'ha trobat cap noticia amb aquest titular");
+        }else{
+            existeix=redactor.noticies.remove(noticia);
         }
-
         if(!existeix){
-            System.out.println("No s'ha trobat cap redactor amb aquest dni");
+            System.out.println("no s'ha pogut eliminar la noticia");
         }
     }
-    public static void mostrarLlistatNot(){
-        boolean existeix = false;
-        String dniRed;
-
-        System.out.println("introdueix el dni del redactor: ");
-        dniRed = lector.nextLine();
-
-        for(Redactor redactor : llistatRedactors){
-            if(redactor.getDni().equalsIgnoreCase(dniRed)){
-                existeix = true;
-                for(Noticia noticia : redactor.noticies){
-                    noticia.mostrarNot();
-                }
+    public static void mostrarLlistatRed() {
+        Redactor redactor = buscarRed();
+        if(redactor == null){
+            System.out.println("no s'ha trobat cap redactor amb aquest dni");
+        }else{
+            for(Noticia not: redactor.noticies){
+                not.mostrarNot();
             }
-        }
-
-        if(!existeix){
-            System.out.println("No s'ha trobat cap redactor amb aquest dni");
         }
     }
-    public static void puntuacioNot(){
-        boolean existeix = false, existeixNot = false;
-        String dniRed, titular;
+    public static void puntuacioNot() {
+        Noticia noticia = buscarNot(buscarRed());
 
-        System.out.println("introdueix el dni del redactor: ");
-        dniRed = lector.nextLine();
-
-        for(Redactor redactor : llistatRedactors){
-            if(redactor.getDni().equalsIgnoreCase(dniRed)){
-                existeix = true;
-                System.out.println("introdueix el titular de la noticia: ");
-                titular = lector.nextLine();
-                for(Noticia noticia : redactor.noticies){
-                    if(noticia.getTitular().equalsIgnoreCase(titular)){
-                        System.out.println("puntuacio noticia-"+titular+": "+noticia.getPuntuacio());
-                        existeixNot = true;
-                    }
-                }
-                if(!existeixNot){
-                    System.out.println("no existeix cap noticia amb aquest titular");
-                }
-            }
-        }
-
-        if(!existeix){
-            System.out.println("No s'ha trobat cap redactor amb aquest dni");
+        if(noticia == null){
+            System.out.println("no s'ha trobat la noticia");
+        }else{
+            System.out.println("Puntuacio: " + noticia.getPuntuacio());
         }
     }
-    public static void preuNot(){
-        boolean existeix = false, existeixNot = false;
-        String dniRed, titular;
+    public static void preuNot() {
+        Noticia noticia = buscarNot(buscarRed());
 
-        System.out.println("introdueix el dni del redactor: ");
-        dniRed = lector.nextLine();
-
-        for(Redactor redactor : llistatRedactors){
-            if(redactor.getDni().equalsIgnoreCase(dniRed)){
-                existeix = true;
-                System.out.println("introdueix el titular de la noticia: ");
-                titular = lector.nextLine();
-                for(Noticia noticia : redactor.noticies){
-                    if(noticia.getTitular().equalsIgnoreCase(titular)){
-                        System.out.println("preu noticia-"+titular+": "+noticia.getPreu()+"€");
-                    }
-                }
-               if(!existeix){
-                   System.out.println("no existeix cap noticia amb aquest titular");
-               }
-            }
-        }
-
-        if(!existeix){
-            System.out.println("No s'ha trobat cap redactor amb aquest dni");
+        if(noticia == null){
+            System.out.println("no s'ha trobat la noticia");
+        }else{
+            System.out.println("Preu: " + noticia.getPreu());
         }
     }
 
+    public static Redactor buscarRed() {
+        String dni = lector.nextLine();
+        Redactor red;
+        System.out.println("entra el dni del redactor: ");
+        dni = lector.nextLine();
+        for (Redactor redactor : llistatRedactors) {
+            if (redactor.getDni().equalsIgnoreCase(dni)) {
+                return redactor;
+            }
+        }
+        return red = null;
+    }
+    public static Noticia buscarNot(Redactor redactor) {
+        Noticia not = null;
+        String titular = lector.nextLine();
+        if (redactor == null) {
+            System.out.println("no s'ha trobat cap redactor amb aquest dni");
+            return not;
+        }
+        System.out.println("entra el titular de la noticia: ");
+        titular = lector.nextLine();
+        for (Noticia noticia : redactor.noticies) {
+            if (noticia.getTitular().equalsIgnoreCase(titular)) {
+                return not;
+            }
+        }
+        return not = null;
+    }
 
 }
 

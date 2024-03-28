@@ -23,6 +23,17 @@ public class Tenis extends Noticia{
 
         return this.preu;
     }
+    @Override
+    public int calcularPuntuacioNoticia(){
+        this.puntuacio = 4;
+
+        if(this.tenistes.equalsIgnoreCase("federer") || this.tenistes.equalsIgnoreCase("nadal") ||
+                this.tenistes.equalsIgnoreCase("djokovic")){
+            this.puntuacio += 3;
+        }
+
+        return this.puntuacio;
+    }
 
     @Override
     public void mostrarNot(){

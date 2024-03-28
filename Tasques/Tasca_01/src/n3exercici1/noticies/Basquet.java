@@ -26,7 +26,23 @@ public class Basquet extends Noticia{
 
         return this.preu;
     }
+    @Override
+    public int calcularPuntuacioNoticia(){
+        this.puntuacio = 4;
 
+        if(this.competicio.equalsIgnoreCase("eurolliga")){
+            this.puntuacio += 3;
+        }
+        if(this.competicio.equalsIgnoreCase("acb")){
+            this.puntuacio += 2;
+        }
+
+        if(this.club.equalsIgnoreCase("barça") || this.club.equalsIgnoreCase("madrid")){
+            this.puntuacio += 1;
+        }
+
+        return this.puntuacio;
+    }
     @Override
     public void mostrarNot(){
         System.out.println("Titular: "+this.titular);

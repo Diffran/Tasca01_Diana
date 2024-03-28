@@ -31,7 +31,27 @@ public class Futbol extends Noticia{
         }
         return this.preu;
     }
+    @Override
+    public int calcularPuntuacioNoticia(){
+        this.puntuacio = 5;
 
+        if(this.competicio.equalsIgnoreCase("lliga de campions")){
+            this.puntuacio += 3;
+        }
+        if(this.competicio.equalsIgnoreCase("lliga")){
+            this.puntuacio += 2;
+        }
+
+        if(this.club.equalsIgnoreCase("barça") || this.club.equalsIgnoreCase("madrid")){
+            this.puntuacio += 1;
+        }
+
+        if(this.jugador.equalsIgnoreCase("ferran torres") || this.jugador.equalsIgnoreCase("benzema")){
+            this.puntuacio += 1;
+        }
+        return this.puntuacio;
+
+    }
     @Override
     public void mostrarNot(){
         System.out.println("Titular: "+this.titular);
