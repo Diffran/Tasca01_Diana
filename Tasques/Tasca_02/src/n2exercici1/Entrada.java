@@ -113,7 +113,7 @@ public class Entrada {
         return dadaUsu;
     }
     public static boolean llegirSiNo(String missatge){
-        String dadaUsu = lector.nextLine();
+        String dadaUsu = lector.nextLine();;
         boolean esCorrecte=false;
         while(!esCorrecte){
             System.out.println(missatge);
