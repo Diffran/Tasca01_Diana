@@ -13,4 +13,5 @@ public class MesosTest {
         assertEquals("agost", Mesos.imprimirMes(7));
         assertNotNull(Mesos.mesos);
     }
+    //dividir per cada + un per l'arrayOutofbounds
 }
