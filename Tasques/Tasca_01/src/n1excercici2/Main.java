@@ -10,9 +10,8 @@ public class Main {
         c1.accelerar();
 
 
-        System.out.println("c1: Potencia->  "+c1.getPotencia()+" Model ->"+ Cotxe.getModel() +" Marca->"+ Cotxe.getMARCA());
-        Cotxe.setModel("Mercedes");
-        System.out.println("c1: Potencia->  "+c1.getPotencia()+" Model ->"+ Cotxe.getModel() +" Marca->"+ Cotxe.getMARCA());
-
+        System.out.println(c1.toString());
+        Cotxe.setModel("CLA C");
+        System.out.println(c1.toString());//Correccio
     }
 }

@@ -29,4 +29,10 @@ public class Cotxe {
     public void accelerar(){
         System.out.println("El vehicle està accelerant");
     }
+
+    //CORRECIÓ
+    @Override
+    public String toString(){
+        return "Potencia-> "+this.potencia+" Model->"+this.model+" Marca->"+MARCA;
+    }
 }
