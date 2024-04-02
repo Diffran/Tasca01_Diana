@@ -21,20 +21,31 @@ public class Main {
         calendari.add(new Month("novembre"));
         calendari.add(new Month("desembre"));
 
+
+        System.out.println("---------------MESOS SENSE AGOST---------------");
+        for(Month mes: calendari){
+            System.out.println(mes.getName());
+        }
+
+        System.out.println("---------------MESOS AMB AGOST POSICIO CORRECTE---------------");
+
         calendari.add(7,(new Month("agost")));
 
         for(Month mes: calendari){
             System.out.println(mes.getName());
         }
-        System.out.println("------------------------------");
-
-        Month mes = calendari.get(7);
-
+        System.out.println("----------------HASHMAP DELS MESOS--------------");
         LinkedHashSet<Month> calendariHash = new LinkedHashSet<>(calendari);
+        Iterator<Month> iterador = calendariHash.iterator();
+        for(Month mes : calendariHash){
+            System.out.println(mes.getName());
+        }
 
+
+        System.out.println("----------------HASHMAP DELS MESOS INTENTANT UN DUPLICAT(AGOST)--------------");
+        Month mes = calendari.get(7);
         calendariHash.add(mes);
 
-        Iterator<Month> iterador = calendariHash.iterator();
         while(iterador.hasNext()){
             mes = iterador.next();
             System.out.println(mes.getName());

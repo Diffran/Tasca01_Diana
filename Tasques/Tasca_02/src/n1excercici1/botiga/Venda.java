@@ -4,8 +4,11 @@ public class Venda {
     private Producte[] productes;
     private float preuTotal;
     
-    public Venda(Producte[] productes){
+    public Venda(Producte[] productes) throws VendaBuidaException{
         this.productes = productes;
+        if(productes.length == 0 || productes == null){
+            throw new VendaBuidaException("ERROR: Per fer una venda primer has d’afegir productes");
+        }
         calcularTotal();
     }
 

@@ -1,6 +1,6 @@
 package n2exercici1.utils;
 
-public class Telefon {
+public abstract class Telefon {
     protected String marca;
     protected String model;
 

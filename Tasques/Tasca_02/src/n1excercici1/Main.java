@@ -16,31 +16,21 @@ public class Main {
         };
 
         try{
-            if(vendaBuida.length==0){
-                throw new VendaBuidaException("Per fer una venda primer has d’afegir productes");  
-            }else{
-                Venda venda1 = new Venda(vendaBuida);
-                System.out.println("s'ha fet una venda de: " + venda1.getPreuTotal()+"€");
-            }
+            Venda venda1 = new Venda(vendaBuida);
+            System.out.println("VENDA 1 -> s'ha fet una venda de: " + venda1.getPreuTotal()+"€");
         }catch(VendaBuidaException e){
             System.out.println(e.getMessage());
         }
 
         try{
-            if(vendaPlena.length==0){
-                throw new VendaBuidaException("Per fer una venda primer has d’afegir productes");  
-            }else{
               Venda venda2 = new Venda(vendaPlena);
-              System.out.println("s'ha fet una venda de:" + venda2.getPreuTotal());
-              try{
-                for(int i=0; i<=venda2.getProductes().length; i++){
-                    System.out.println(venda2.getProductes()[i].getNom());
-                  }
-              }catch(ArrayIndexOutOfBoundsException e){
-                  System.out.println("ArrayIndexOutOfBoundsException: "+ e.getMessage());
+              System.out.println("VENDA2 -> s'ha fet una venda de:" + venda2.getPreuTotal());
+              for(int i=0; i<=venda2.getProductes().length; i++){
+                System.out.println(venda2.getProductes()[i].getNom());
               }
-            }
-        }catch(VendaBuidaException e){
+        }catch(ArrayIndexOutOfBoundsException e){
+              System.out.println("ArrayIndexOutOfBoundsException: "+ e.getMessage());
+        } catch(VendaBuidaException e){
             System.out.println(e.getMessage());
         }       
     }
