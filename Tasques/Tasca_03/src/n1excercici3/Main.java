@@ -18,7 +18,7 @@ public class Main {
            
        String linea, nomUsuari, rutaRelativa, resposta;
        String[] partsLinea = new String[2];
-       int punts = 0, indexAleatori, contador = 0, index = 0;;
+       int punts=0, indexAleatori, contador=0, index=0;
        
 
        rutaRelativa = "Tasques"+ File.separator+"dades"+File.separator+"countries.txt";

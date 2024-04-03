@@ -1,6 +1,6 @@
 package n1exercici1.pack;
 
-public class Treballador {
+public abstract class Treballador  {
     protected String nom;
     protected String cognom;
     protected double preuHora;
@@ -11,7 +11,5 @@ public class Treballador {
         this.preuHora = preuHora;
     }
 
-    public double calcularSou(double hores){
-        return this.preuHora*hores;
-    };
+    public abstract double calcularSou(double hores);
 }
