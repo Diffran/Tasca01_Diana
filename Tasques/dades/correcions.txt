@@ -1,0 +1,13 @@
+T1 -> nv1Ex2 metode toString (Override), si no imprimeix la instancia, preguntar??*||nv2 * sí, fet. sempre que es pugui s'ha de fer abstract??
+
+T2 -> nv2ex1 llança l'excepcio la classe Venda, la gestiona el Main *|| nv2 tambe?? no ho sé fer sense que es surti del bucle al cridar el metode.-
+
+T3 -> nv1ex1 fet * || nv1ex3 ?¿?¿? si no ho faig em dona un error de compilació, diu  might no have been initialized - ||nv2ex1 falta per fer - || nv2ex2 falta fer
+
+
+T4 ->  fets els dos, borro lo que tenia abans??? o  no?
+
+T5 -> falta axio -- mirar package amb ivan i miguel comentar perque hi ha dos exercicis, un es un tree i laltre es un bucle que endreça per carpeta
+nv2 ARREGLAR, mirar perque no funciona!!
+
+T6 -> paquets pack per mandra :) treballador abstracte fet
