@@ -26,6 +26,6 @@ public class Main {
 
         System.out.println("---------------------------------------------------");
         System.out.println("numero de restaurants: "+llistatRestaurants.size());
-        llistatRestaurants.forEach(restaurant -> System.out.println(restaurant.getNom()+"->"+restaurant.getPuntuacio()));
+        llistatRestaurants.forEach(restaurant -> System.out.println(restaurant.toString()));
     }
 }

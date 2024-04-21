@@ -27,11 +27,10 @@ public class Main {
 
         System.out.println("---------------------------------------------------");
         System.out.println("numero de restaurants: "+llistatRestaurants.size());
-        llistatRestaurants.forEach(restaurant -> System.out.println(restaurant.getNom()+"->"+restaurant.getPuntuacio()));
+        llistatRestaurants.forEach(restaurant -> System.out.println(restaurant.toString()));
 
         //-------------------EXERCICI 2----------------------------------------------
         System.out.println("-----------EXERCICI 2---------------------   ");
-        RestaurantEx2.ordenarRestaurants(llistatRestaurants).forEach(restaurant -> System.out.println(restaurant.getNom()
-            +"->"+restaurant.getPuntuacio()));
+        RestaurantEx2.ordenarRestaurants(llistatRestaurants).forEach(restaurant -> System.out.println(restaurant.toString()));
     }
 }
