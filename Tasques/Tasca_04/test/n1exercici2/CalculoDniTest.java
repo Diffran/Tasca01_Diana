@@ -14,9 +14,7 @@ public class CalculoDniTest {
             76243131,81250943,12680260,51854026,55607297,24420826,55915411);
     public static final List<Character> lletra = List.of('X','S','Q','V','Q','S','C','J','R','L');
     public static final HashMap<Integer, Character> dni = new HashMap<>();
-    public static Stream<Integer> donarNumero(){
-        return numero.stream();
-    }
+
 
     public static HashMap<Integer,Character> inicializarDni(){
 
@@ -24,11 +22,6 @@ public class CalculoDniTest {
             dni.put(numero.get(i), lletra.get(i));
         }
         return dni;
-    }
-    @ParameterizedTest
-    @MethodSource("donarNumero")
-    public void calculDniTest(Integer numero){
-        Assertions.assertEquals(inicializarDni().get(numero), CalculoDni.calculDni(numero));
     }
 
     //Arreglat

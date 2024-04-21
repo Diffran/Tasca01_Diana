@@ -8,10 +8,16 @@ import static org.junit.Assert.assertNotNull;
 
 public class MesosTest {
     @Test
-    public void imprimirMesosTest(){
+    public void mesosSize(){
         assertEquals(12, Mesos.mesos.size());
+    }
+    @Test
+    public void mesosAgost(){
         assertEquals("agost", Mesos.imprimirMes(7));
+    }
+
+    @Test
+    public void noNull(){
         assertNotNull(Mesos.mesos);
     }
-    //dividir per cada + un per l'arrayOutofbounds
 }
