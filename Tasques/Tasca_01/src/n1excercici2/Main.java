@@ -10,8 +10,8 @@ public class Main {
         c1.accelerar();
 
 
-        System.out.println(c1.toString());
+        System.out.println(c1);
         Cotxe.setModel("CLA C");
-        System.out.println(c1.toString());//Correccio
+        System.out.println(c1);//Correccio
     }
 }
