@@ -1,7 +1,7 @@
 package n2exercici1;
 
-import n1exercici2.pack.Persona;
-import n2exercici1.pack.NoGenericMethodN2;
+import n1exercici2.generic.Persona;
+import n2exercici1.noGeneric.NoGenericMethodN2;
 
 public class Main {
     public static void main(String[] args) {

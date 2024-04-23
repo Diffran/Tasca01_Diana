@@ -1,4 +1,4 @@
-package n2exercici1.pack;
+package n2exercici1.noGeneric;
 
 public class NoGenericMethodN2 {
     public static <T> void metodeGeneric(T obj1, T obj2, int obj3){//un no Generic

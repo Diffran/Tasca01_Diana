@@ -1,6 +1,6 @@
 package n1exercici1;
 
-import n1exercici1.pack.NoGenericMethods;
+import n1exercici1.nogeneric.NoGenericMethods;
 
 public class Main {
     public static void main(String[] args) {

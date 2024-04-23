@@ -1,4 +1,4 @@
-package n1exercici2.pack;
+package n1exercici2.generic;
 
 public class GenericMethods {
     public static <T> void metodeGeneric(T obj1, T obj2, T obj3){

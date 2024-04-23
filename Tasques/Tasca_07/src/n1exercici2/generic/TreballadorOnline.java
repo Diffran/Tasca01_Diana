@@ -1,4 +1,4 @@
-package n1exercici2.pack;
+package n1exercici2.generic;
 
 public class TreballadorOnline extends Treballador {
     private static final double TARIFA_INT= 30;

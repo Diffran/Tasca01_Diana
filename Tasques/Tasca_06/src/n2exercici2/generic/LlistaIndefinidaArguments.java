@@ -1,4 +1,4 @@
-package n2exercici2.pack;
+package n2exercici2.generic;
 
 public class LlistaIndefinidaArguments {
     public static <T> void metodeLlistaGen(T...args){

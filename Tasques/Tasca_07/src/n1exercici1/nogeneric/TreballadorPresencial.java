@@ -1,7 +1,7 @@
-package n1exercici1.pack;
+package n1exercici1.nogeneric;
 
 public class TreballadorPresencial extends Treballador{
-    private static double benzina;
+    private static double benzina = 30;
     public TreballadorPresencial(String nom, String cognom, double preuHora) {
         super(nom, cognom, preuHora);
     }

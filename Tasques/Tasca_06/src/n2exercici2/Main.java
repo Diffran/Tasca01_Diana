@@ -1,8 +1,8 @@
 package n2exercici2;
 
 
-import n1exercici2.pack.Persona;
-import n2exercici2.pack.LlistaIndefinidaArguments;
+import n1exercici2.generic.Persona;
+import n2exercici2.generic.LlistaIndefinidaArguments;
 
 public class Main {
     public static void main(String[] args) {

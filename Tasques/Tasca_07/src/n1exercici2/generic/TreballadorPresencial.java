@@ -1,4 +1,4 @@
-package n1exercici2.pack;
+package n1exercici2.generic;
 
 public class TreballadorPresencial extends Treballador {
     private static double benzina;
