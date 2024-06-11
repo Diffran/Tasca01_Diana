@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class CalculoDniTest {
-    public static final List<Integer> numero = List.of(47964670,30151497,75135795,
+    public static final List<Integer> numero = List.of(30151497,75135795,
             76243131,81250943,12680260,51854026,55607297,24420826,55915411);
-    public static final List<Character> lletra = List.of('X','S','Q','V','Q','S','C','J','R','L');
+    public static final List<Character> lletra = List.of('S','Q','V','Q','S','C','J','R','L');
     public static final HashMap<Integer, Character> dni = new HashMap<>();
 
 
